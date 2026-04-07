@@ -41,7 +41,7 @@ const ProjectCard = ({ project, index }) => {
           {project.category}
         </div>
 
-        <h3 className="text-[clamp(1.5rem,3vw,2.25rem)] font-black text-white mb-4 tracking-tight uppercase group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all">
+        <h3 className="text-[clamp(1.2rem,3vw,2.25rem)] font-black text-white mb-4 tracking-tight uppercase group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all">
           {project.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400">{project.title.split(' ')[1]}</span>
         </h3>
         
@@ -84,7 +84,7 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-white text-[clamp(2.5rem,6vw,5rem)] leading-none font-black uppercase tracking-tighter"
+          className="text-white text-[clamp(2rem,6vw,5rem)] leading-none font-black uppercase tracking-tight"
         >
           Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400">Missions</span>
         </motion.h2>

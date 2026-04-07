@@ -37,7 +37,7 @@ const About = () => {
           variants={containerVariants}
           className="text-center mb-24"
         >
-          <motion.h2 variants={itemVariants} className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter leading-tight drop-shadow-lg">
+          <motion.h2 variants={itemVariants} className="text-white text-3xl md:text-6xl font-black uppercase tracking-tight leading-tight drop-shadow-lg">
             Architecting <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400">Digital</span><br/> Ecosystems
           </motion.h2>
           <motion.div variants={itemVariants} className="w-16 h-[2px] bg-gradient-to-r from-purple-500 to-cyan-400 mx-auto mt-8 shadow-[0_0_15px_rgba(34,211,238,0.5)]" />

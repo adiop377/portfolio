@@ -100,7 +100,7 @@ button {
 
 /* Utils */
 .section {
-  padding: 100px 5%;
+  padding: clamp(60px, 10vw, 100px) 5%;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -203,6 +203,12 @@ button {
   letter-spacing: 0.5em;
   text-transform: uppercase;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .cinematic-text {
+    letter-spacing: 0.2em;
+  }
 }
 
 /* Project Scene Effects */

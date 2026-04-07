@@ -3,8 +3,8 @@ import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import AbstractBackground from './AbstractBackground';
 
 const Hero = () => {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
+  const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 : 500);
+  const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight / 2 : 500);
 
   const smoothX = useSpring(mouseX, { damping: 50, stiffness: 400 });
   const smoothY = useSpring(mouseY, { damping: 50, stiffness: 400 });
@@ -77,7 +77,7 @@ const Hero = () => {
 
         <motion.h1 
           variants={itemVariants}
-          className="text-white text-[clamp(2.5rem,8vw,6rem)] leading-none font-black mb-4 tracking-tight"
+          className="text-white text-[clamp(2rem,10vw,6rem)] leading-none font-black mb-4 tracking-tight"
           style={{ fontFamily: 'var(--font-heading)' }}
         >
           ADITYA <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400 drop-shadow-[0_0_20px_rgba(168,85,247,0.6)] animate-pulse">RAJ</span>
@@ -85,7 +85,7 @@ const Hero = () => {
 
         <motion.h2 
           variants={itemVariants}
-          className="text-white/60 font-light tracking-[clamp(0.2em,1vw,0.4em)] uppercase text-[clamp(0.6rem,2vw,0.875rem)] mb-12 drop-shadow-md text-center max-w-lg mx-auto leading-relaxed px-4"
+          className="text-white/60 font-light tracking-[clamp(0.1em,1vw,0.4em)] uppercase text-[clamp(0.7rem,2vw,0.875rem)] mb-12 drop-shadow-md text-center max-w-lg mx-auto leading-relaxed px-4"
         >
           Full Stack Developer crafting immersive web experiences.
         </motion.h2>

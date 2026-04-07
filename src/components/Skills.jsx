@@ -71,7 +71,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-white text-[clamp(2.5rem,6vw,4.5rem)] leading-none font-black uppercase tracking-tighter"
+            className="text-white text-[clamp(2rem,6vw,4.5rem)] leading-none font-black uppercase tracking-tight"
           >
             CORE <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">CAPABILITIES</span>
           </motion.h2>

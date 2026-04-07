@@ -42,14 +42,14 @@ const Story = () => {
           }}
           className="max-w-4xl mx-auto"
         >
-          <h2 className="cinematic-text text-white text-4xl md:text-7xl font-black uppercase tracking-tighter leading-tight drop-shadow-2xl flex flex-wrap justify-center gap-x-4 md:gap-x-8 gap-y-2">
+          <h2 className="cinematic-text text-white text-3xl md:text-7xl font-black uppercase tracking-tight leading-tight drop-shadow-2xl flex flex-wrap justify-center gap-x-4 md:gap-x-8 gap-y-4">
             <motion.span variants={wordVariants} className="inline-block">FROM</motion.span>
-            <motion.span variants={wordVariants} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]">IDEAS</motion.span>
-            <div className="w-full basis-full h-0"></div>
+            <motion.span variants={wordVariants} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400">IDEAS</motion.span>
+            <div className="w-full basis-full h-0 hidden md:block"></div>
             <motion.span variants={wordVariants} className="inline-block">TO</motion.span>
             <motion.span variants={wordVariants} className="inline-block">REAL</motion.span>
             <motion.span variants={wordVariants} className="inline-block">WEB</motion.span>
-            <motion.span variants={wordVariants} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">EXPERIENCES</motion.span>
+            <motion.span variants={wordVariants} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">EXPERIENCES</motion.span>
           </h2>
           
           {/* Animated custom underline */}

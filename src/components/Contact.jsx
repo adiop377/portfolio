@@ -54,8 +54,8 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-white uppercase leading-none tracking-tighter"
-          style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', fontWeight: '900' }}
+          className="text-white uppercase leading-none tracking-tight"
+          style={{ fontSize: 'clamp(2rem, 8vw, 5rem)', fontWeight: '900' }}
         >
           Let's Build <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.5)]">Something Grand</span>
         </motion.h2>
@@ -98,8 +98,8 @@ const Contact = () => {
             className="group relative overflow-hidden flex items-center justify-center font-bold text-white transition-all duration-300"
             style={{
               width: '100%',
-              padding: '20px',
-              fontSize: '1.2rem',
+              padding: 'clamp(15px, 2vw, 20px)',
+              fontSize: 'clamp(1rem, 2vw, 1.2rem)',
               background: status === 'success' ? '#10B981' : status === 'error' ? '#EF4444' : 'black',
               border: status === 'success' ? '1px solid #10B981' : '1px solid rgba(168,85,247,0.5)',
               borderRadius: '15px',
