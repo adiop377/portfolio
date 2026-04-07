@@ -9,7 +9,7 @@ const projects = [
     title: 'Play Nova',
     category: 'Full-Stack Web App',
     image: projectNeon,
-    link: 'https://ff-market-store.vercel.app/',
+    link: 'https://playnovax.vercel.app/',
     accent: '#A855F7', // Neon Purple
     description: 'A premium digital asset marketplace and gaming platform with rapid transactions.'
   },
