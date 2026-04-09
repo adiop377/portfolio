@@ -69,7 +69,7 @@ const AbstractBackground = () => {
                 {shapes.map((shape) => (
                     <motion.div
                         key={shape.id}
-                        className={`absolute rounded-full backdrop-blur-3xl border bg-gradient-to-br ${shape.size} ${shape.position} ${shape.gradient} ${shape.border} ${shape.shadow}`}
+                        className={`absolute rounded-full backdrop-blur-md md:backdrop-blur-3xl border bg-gradient-to-br ${shape.size} ${shape.position} ${shape.gradient} ${shape.border} ${shape.shadow}`}
                         animate={{
                             y: shape.animation.y,
                             x: shape.animation.x || [0, 0, 0],

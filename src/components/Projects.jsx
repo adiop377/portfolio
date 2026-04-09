@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import projectNeon from '../assets/project-neon.png';
+import projectPulse from '../assets/project-pulse.png';
 
 const projects = [
   {
@@ -11,8 +12,19 @@ const projects = [
     image: projectNeon,
     link: 'https://playnovax.vercel.app/',
     accent: '#A855F7', // Neon Purple
-    description: 'A premium digital asset marketplace and gaming platform with rapid transactions.'
+    description: 'A premium digital asset marketplace and gaming platform with rapid transactions.',
+    buttonText: 'Launch Protocol'
   },
+  {
+    id: 2,
+    title: 'Untitled Studios',
+    category: 'INTERACTIVE GAME DEV PORTFOLIO',
+    image: projectPulse,
+    link: 'https://untitled-creator.vercel.app/',
+    accent: '#06B6D4', // Cyan
+    description: 'A futuristic pixel-inspired portfolio designed for game developers, focused on immersive UI, smooth animations, and engaging user experience.',
+    buttonText: 'ENTER EXPERIENCE'
+  }
 ];
 
 const ProjectCard = ({ project, index }) => {
@@ -28,7 +40,7 @@ const ProjectCard = ({ project, index }) => {
         transition: { duration: 0.2, ease: "easeOut" }
       }}
       viewport={{ once: true }}
-      className="group relative flex flex-col h-full rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-purple-500/20 transition-all duration-300 p-6 md:p-8 cursor-pointer max-w-lg mx-auto w-full"
+      className="group relative flex flex-col h-full rounded-2xl overflow-hidden backdrop-blur-md md:backdrop-blur-xl bg-white/5 border border-purple-500/20 transition-all duration-300 p-6 md:p-8 cursor-pointer w-full"
     >
       {/* Category Badge & Glow */}
       <div 
@@ -41,8 +53,8 @@ const ProjectCard = ({ project, index }) => {
           {project.category}
         </div>
 
-        <h3 className="text-[clamp(1.2rem,3vw,2.25rem)] font-black text-white mb-4 tracking-tight uppercase group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all">
-          {project.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400">{project.title.split(' ')[1]}</span>
+        <h3 className="text-[clamp(1.2rem,3vw,2.25rem)] font-black text-white mb-4 tracking-tight uppercase group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all leading-tight">
+          {project.title.split(' ')[0]} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400">{project.title.split(' ').slice(1).join(' ')}</span>
         </h3>
         
         <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-10 flex-grow font-light">
@@ -56,7 +68,7 @@ const ProjectCard = ({ project, index }) => {
           className="self-start relative inline-flex items-center justify-center px-8 py-3 font-bold text-white transition-all duration-300 bg-black/40 border border-purple-500/30 rounded-full hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] overflow-hidden group/btn"
         >
           <span className="absolute inset-0 w-0 h-full transition-all duration-500 ease-out bg-gradient-to-r from-purple-600 to-cyan-500 group-hover/btn:w-full -z-10" />
-          <span className="relative tracking-[0.2em] uppercase text-xs">Launch Protocol</span>
+          <span className="relative tracking-[0.2em] uppercase text-xs">{project.buttonText || 'Launch Protocol'}</span>
         </a>
       </div>
     </motion.div>
@@ -91,8 +103,8 @@ const Projects = () => {
         <div className="w-24 h-[2px] bg-gradient-to-r from-purple-500 to-cyan-400 mx-auto mt-6" />
       </div>
 
-      {/* Grid Layout for one Project - centered */}
-      <div className="flex justify-center relative z-10 max-w-7xl mx-auto">
+      {/* Grid Layout for Projects */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10 max-w-6xl mx-auto px-4 justify-items-center">
         {projects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}

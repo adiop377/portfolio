@@ -9,8 +9,8 @@ const Story = () => {
   });
 
   const wordVariants = {
-    hidden: { opacity: 0, y: 50, filter: 'blur(10px)' },
-    visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.8, ease: "easeOut" } }
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
 
   return (
@@ -36,20 +36,20 @@ const Story = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, margin: "-100px" }}
+          viewport={{ once: true, margin: "-50px" }}
           variants={{
             visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } }
           }}
           className="max-w-4xl mx-auto"
         >
           <h2 className="cinematic-text text-white text-3xl md:text-7xl font-black uppercase tracking-tight leading-tight drop-shadow-2xl flex flex-wrap justify-center gap-x-4 md:gap-x-8 gap-y-4">
-            <motion.span variants={wordVariants} className="inline-block">FROM</motion.span>
-            <motion.span variants={wordVariants} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400">IDEAS</motion.span>
+            <motion.span variants={wordVariants} className="inline-block will-change-transform">FROM</motion.span>
+            <motion.span variants={wordVariants} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-400 will-change-transform">IDEAS</motion.span>
             <div className="w-full basis-full h-0 hidden md:block"></div>
-            <motion.span variants={wordVariants} className="inline-block">TO</motion.span>
-            <motion.span variants={wordVariants} className="inline-block">REAL</motion.span>
-            <motion.span variants={wordVariants} className="inline-block">WEB</motion.span>
-            <motion.span variants={wordVariants} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">EXPERIENCES</motion.span>
+            <motion.span variants={wordVariants} className="inline-block will-change-transform">TO</motion.span>
+            <motion.span variants={wordVariants} className="inline-block will-change-transform">REAL</motion.span>
+            <motion.span variants={wordVariants} className="inline-block will-change-transform">WEB</motion.span>
+            <motion.span variants={wordVariants} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 will-change-transform">EXPERIENCES</motion.span>
           </h2>
           
           {/* Animated custom underline */}
