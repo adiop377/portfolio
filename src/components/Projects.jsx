@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 
 import projectNeon from '../assets/project-neon.png';
 import projectPulse from '../assets/project-pulse.png';
+import projectDentist from '../assets/project-dentist.png';
+import projectLawyer from '../assets/project-lawyer.png';
 
 const projects = [
   {
@@ -24,6 +26,28 @@ const projects = [
     accent: '#06B6D4', // Cyan
     description: 'A futuristic pixel-inspired portfolio designed for game developers, focused on immersive UI, smooth animations, and engaging user experience.',
     buttonText: 'ENTER EXPERIENCE'
+  },
+  {
+    id: 3,
+    title: 'SmileCraft Prestige',
+    category: 'PREMIUM HEALTHCARE (DEMO)',
+    image: projectDentist,
+    link: 'https://1demodental.vercel.app/',
+    accent: '#F59E0B', // Amber
+    description: 'A high-end, aesthetic dental clinic website designed for specialized dentists. This is a fully functional DEMO WEBSITE showcasing premium dental services.',
+    buttonText: 'VIEW CLINIC',
+    isDemo: true
+  },
+  {
+    id: 4,
+    title: 'PVS Legal Associates',
+    category: 'CORPORATE LEGAL (DEMO)',
+    image: projectLawyer,
+    link: 'https://demo-pvslegalassociates.vercel.app/',
+    accent: '#EF4444', // Red-Gold theme in generation, but I'll use Red/Rose
+    description: 'A cinematic, high-authority legal firm website designed for professional lawyers. This is a fully functional DEMO WEBSITE showcasing legal expertise.',
+    buttonText: 'CONSULT MISSION',
+    isDemo: true
   }
 ];
 
@@ -40,7 +64,7 @@ const ProjectCard = ({ project, index }) => {
         transition: { duration: 0.2, ease: "easeOut" }
       }}
       viewport={{ once: true }}
-      className="group relative flex flex-col h-full rounded-2xl overflow-hidden backdrop-blur-md md:backdrop-blur-xl bg-white/5 border border-purple-500/20 transition-all duration-300 p-6 md:p-8 cursor-pointer w-full"
+      className="group relative flex flex-col h-full rounded-2xl overflow-hidden backdrop-blur-md md:backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-300 p-6 md:p-8 cursor-pointer w-full"
     >
       {/* Category Badge & Glow */}
       <div 
@@ -49,8 +73,15 @@ const ProjectCard = ({ project, index }) => {
       />
       
       <div className="relative z-10 flex flex-col flex-grow">
-        <div className="self-start mb-6 px-3 py-1 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-[10px] text-white/80 font-bold uppercase tracking-widest" style={{ borderColor: `${project.accent}55`, color: project.accent }}>
-          {project.category}
+        <div className="flex justify-between items-start mb-6">
+          <div className="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full border border-white/10 text-[10px] text-white/80 font-bold uppercase tracking-widest" style={{ borderColor: `${project.accent}55`, color: project.accent }}>
+            {project.category}
+          </div>
+          {project.isDemo && (
+            <div className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-[9px] text-red-400 font-bold uppercase tracking-widest">
+              Demo Project
+            </div>
+          )}
         </div>
 
         <h3 className="text-[clamp(1.2rem,3vw,2.25rem)] font-black text-white mb-4 tracking-tight uppercase group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-all leading-tight">
